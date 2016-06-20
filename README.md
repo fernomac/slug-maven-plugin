@@ -33,7 +33,7 @@ central.
 ## Slug Definitions
 
 Slugs are defined in `*.slug` files. There's a full grammar
-[here](src/main/antlr4), but the basic idea is:
+[here](src/main/antlr4/io/coronet/slug/antlr), but the basic idea is:
 
 ```
 /**
