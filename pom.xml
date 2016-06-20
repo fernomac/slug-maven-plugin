@@ -9,6 +9,7 @@
 
   <groupId>io.coronet.slug</groupId>
   <artifactId>slug-maven-plugin</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <properties>
