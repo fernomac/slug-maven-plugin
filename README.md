@@ -1,11 +1,11 @@
-=Slug
+#Slug
 
 Slug is a maven plugin that generates (intentionally) simple POJOs from a
 little schema language. You can think of it like less-fancy version of
 [lombok](https://projectlombok.org/) that happens to work exactly the way that
 I want it to by default and was way easier to write.
 
-== Using Slug
+## Using Slug
 
 Add the slug plugin to your project by adding the following to your `pom.xml`:
 
@@ -32,7 +32,7 @@ You'll need to check out and `mvn install` slug into your local maven
 repository until such time as I decide to push a version into maven
 central.
 
-== Slug Definitions
+## Slug Definitions
 
 Slugs are defined in `*.slug` files. There's a full grammar
 [here](src/main/antlr4), but the basic idea is:
@@ -80,7 +80,7 @@ slug Human {
 
 Actually, that's pretty much it. Like I said, intentionally simple.
 
-== Generated POJOs
+## The Generated POJOs
 
 Slug generates a Java class corresponding to each of your slug descriptions.
 For each defined field, you get a corresponding field as well as a getter and
@@ -115,7 +115,7 @@ public class Human {
 }
 ```
 
-== Configuring Slug
+## Configuring Slug
 
 By default Slug looks for files named `*.slug` under `src/main/slug/` to
 process. You can change the source directory by setting the cleverly-
@@ -127,7 +127,7 @@ Slug also accepts an `outputDirectory` parameter if you'd like to
 change where the generated Java source code ends up. It defaults
 to `target/generated-sources/slug/`.
 
-== Slug and IDEs
+## Slug and IDEs
 
 Slug should work pretty well inside Eclipse/m2e out of the box. There are
 almost certainly some rough edges; when in doubt `Project -> Clean...` and you
