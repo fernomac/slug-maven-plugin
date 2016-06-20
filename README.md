@@ -1,5 +1,3 @@
-#Slug
-
 Slug is a maven plugin that generates (intentionally) simple POJOs from a
 little schema language. You can think of it like less-fancy version of
 [lombok](https://projectlombok.org/) that happens to work exactly the way that
