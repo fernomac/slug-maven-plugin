@@ -88,8 +88,8 @@ public class SlugMojo extends AbstractMojo {
     }
 
     private String getPackage(File input) {
-        String rootp = outputDirectory.getPath();
-        String inputp = input.getPath();
+        String rootp = sourceDirectory.getPath();
+        String inputp = input.getParentFile().getPath();
 
         if (!inputp.startsWith(rootp)) {
             throw new IllegalStateException(
@@ -97,10 +97,13 @@ public class SlugMojo extends AbstractMojo {
                     + rootp + "'!");
         }
 
+        String relative;
         if (rootp.endsWith("/")) {
-            return inputp.substring(rootp.length());
+            relative = inputp.substring(rootp.length());
         } else {
-            return inputp.substring(rootp.length() + 1);
+            relative = inputp.substring(rootp.length() + 1);
         }
+
+        return relative.replace('/', '.');
     }
 }

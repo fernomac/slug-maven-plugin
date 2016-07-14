@@ -30,7 +30,7 @@ public class SlugModel {
     }
 
     private static String docsFrom(DocsContext docs) {
-        return (docs == null ? null : docs.docstring().getText());
+        return (docs == null || docs.docstring() == null ? null : docs.docstring().getText());
     }
 
     private static List<FieldModel> fieldsFrom(List<FieldContext> fields) {
